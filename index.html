@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Expandable Sidebar</title>
+
+<style>
+  *{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(./pexels-photo.jpg);
+  }
+
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 6px;                
+    background: black;
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+
+  
+  .sidebar:hover {
+    width: 220px;
+    background: transparent;
+  }
+
+
+  .menu {
+    margin-top: 60px;
+  }
+
+  .menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .menu a:hover {
+    background: #222;
+    transform: scale(1.05);
+  }
+
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: bold;
+  }
+
+
+  .sidebar:not(:hover) .text {
+    display: none;
+  }
+  button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .k{
+    display: flex;
+    background: transparent;
+       
+    justify-content: center;
+
+    height: 100vh;
+    width: 500px;
+    box-shadow: 10px 10px 10px 10px rgba(17, 17, 17, 0.2);
+   filter: drop-shadow(10px 10px 10px rgba(197, 115, 255, 0.5));
+    corner-shape: notch;
+    border-radius: 100px;
+  }
+   
+  p{
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+
+  }
+  h1{
+    color: transparent;
+    background-clip: text;
+    background-image: url(./pexels-photo.jpg);
+    font-size: 50px;
+    margin-top: 50px;
+    -webkit-background-clip: text;
+  }
+  button:hover {
+    background: #222;
+    transform: scale(1.05);
+  }
+  
+  
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="menu">
+    <button onclick="gg()">
+      <div class="icon">🏠</div>
+      <span class="text">ch 1</span>
+    </button>
+    <button onclick="hh()">
+      <div class="icon">📄</div>
+      <span class="text">ch 2</span>
+    </button>
+    <button onclick="playMusic()">⚙️</button>
+    
+
+<audio id="music">
+  <source src="./music.mp3" type="audio/mpeg">
+</audio>
+    
+    
+    </div>
+</div>
+
+    <script src="./app.js"></script>
+    <center>
+    <div class="k">
+        <h1>js</h1>
+        <p id="w"></p>
+    </div>
+</center>
+    </body>
+   </html>
